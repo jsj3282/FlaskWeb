@@ -1,0 +1,14 @@
+table {
+    float: left;
+    border: 2px solid #444444;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: bisque;
+}
+
+td {
+    width: 10%;
+    text-align: center;
+}
