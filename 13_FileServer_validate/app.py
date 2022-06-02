@@ -22,7 +22,11 @@ def upload_page():
     form = FileForm()
     if form.validate_on_submit():
         f = form.files.data
-        f.save(currentPath + "/13_FileServer/uploads/" + secure_filename(f.filename))
+        f.save(
+            currentPath
+            + "/13_FileServer_validate/uploads/"
+            + secure_filename(f.filename)
+        )
         return render_template("check.html")
     return render_template("upload.html", form=form)
 

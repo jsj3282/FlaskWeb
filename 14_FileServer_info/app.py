@@ -37,10 +37,12 @@ def upload_page():
     form = FileForm()
     if form.validate_on_submit():
         f = form.files.data
-        f.save(currentPath + "/14_FileServer/uploads/" + secure_filename(f.filename))
+        f.save(
+            currentPath + "/14_FileServer_info/uploads/" + secure_filename(f.filename)
+        )
         fileinfo = {}
         ctime, mtime, atime, size = info(
-            currentPath + "/14_FileServer/uploads/" + f.filename
+            currentPath + "/14_FileServer_info/uploads/" + f.filename
         )
         fileinfo["create"] = stamp2real(ctime)
         fileinfo["modify"] = stamp2real(mtime)

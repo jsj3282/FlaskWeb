@@ -19,7 +19,9 @@ def upload_file():
     currentPath = os.getcwd()
     if request.method == "POST":
         f = request.files["file"]
-        f.save(currentPath + "/12_FileServer/uploads/" + secure_filename(f.filename))
+        f.save(
+            currentPath + "/12_FileServer_upload/uploads/" + secure_filename(f.filename)
+        )
         return render_template("check.html")
     else:
         return "Not"
