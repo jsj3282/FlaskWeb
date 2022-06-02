@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Server</title>
+        <link rel="icon" href="/static/images/favicon.png">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <div class="col-md-4 mt-3">
+            <h3><i class="fa fa-folder-open fa-lg"></i>&nbsp;FileServer</h3>
+        </div>
+        <hr width="100%" class="divider"/>
+        
+        <div class="mr-5 text-md-right">
+            <span class="float-left mt-2 ml-5">
+                <h6>폴더: {{ pwd }}</h6>
+            </span>
+            <img src="/static/images/upload.png", width="50">
+            <img src="/static/images/download.png", width="50">
+        </div>
+        <hr width="100%" class="divider"/>
+        
+        {% block content %}{% endblock %}
+    </body>
+</html>
